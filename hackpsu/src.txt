@@ -1,0 +1,362 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+	<head>
+		
+		<title>LionCash+ 90 day Review</title>
+		
+
+	
+		<script language="JavaScript">
+			function OpenEmailAddresses()
+				{var mypath = "EMAIL_ADDRESSES_WIN.cfm";
+			 	 window.open(mypath+"?"+Math.random(),"mywin","scrollbars=no,width=300,height=200,resizable=no");  
+				}
+				function EmailReport()
+				{var mypath = "EMAIL_REPORT_ACT.cfm";
+			 	 window.open(mypath+"?"+Math.random(),"mywin","scrollbars=1,left=190,top=160,width=550,height=320");  
+				}
+			
+			function EmailRpt()
+				{if (document.frm_EMAILS.email1.value != '')
+					{var em1 = document.frm_EMAILS.email1.value;}
+				 else
+				 	{var em1 = '';}
+				if (document.frm_EMAILS.email2.value != '')
+					{var em2 = document.frm_EMAILS.email2.value;}
+				else
+					{var em2 = '';}
+				if (document.frm_EMAILS.email3.value != '')
+					{var em3 = document.frm_EMAILS.email3.value;}
+				else
+					{var em3 = '';}
+				if (em1 == '' && em2 == '' && em3 == '')
+					{window.alert('You must enter email addresses.');
+					 var mypath = "EMAIL_ADDRESSES_WIN.cfm";
+				 	 window.open(mypath+"?"+Math.random(),"mywin","scrollbars=no,width=300,height=200,resizable=no");  		
+				 	}
+				else
+				 	{var b_date = '03/15/2019';
+					 var e_date = '03/16/2019';
+					 var accts = '';
+					 var strErr="You are about to email your transaction history report to:";
+					 if (em1 != '')
+						{strErr+="\n"+em1;}
+					 if (em2 != '')
+						{strErr+="\n"+em2;}
+					 if (em3 != '')
+						{strErr+="\n"+em3;}
+					 if (b_date != '')
+						{strErr+="\n\nFor date range: "+b_date+'-'+e_date;}
+					 if (accts != '')
+						{strErr+="\n\nFor Accounts: "+accts;}
+					 if (strErr!="You are about to email your transaction history report to:")
+					 {var ok_submit = window.confirm(strErr);
+						if (ok_submit)
+						 {openprocwin();
+						  document.frm_EMAILS.submit();}
+						 else
+						 {return false;}
+						 }
+					 else
+					 {
+						window.alert('You must enter email addresses.');
+						var mypath = "EMAIL_ADDRESSES_WIN.cfm";
+						window.open(mypath+"?"+Math.random(),"mywin","scrollbars=no,width=300,height=200,resizable=no");  		
+					 }
+					}
+				}
+			
+			function FillForm()
+				{document.frm_EMAILS.TXT_BEGIN_DATE.value='03/15/2019';
+				}
+			
+			function openprocwin(){
+				 procwin = window.open('PROCESSING_WIN.CFM','procwin','scrollbars=no,location=no,directories=no,menubar=no,toolbar=no,resizeable=no,status=no,width=200,height=180,screenX=400,screenY=400,top=400,left=400')}
+			
+				<!--
+			 	
+			
+			function GoBack()
+				{window.location = 'LC_90DAY_REVIEW_WIN.cfm';}
+			
+			function closeprocwin(){
+				procwin = window.open('','procwin');
+				procwin.close()}
+			//-->
+		</script>	
+	</head>
+	<center><img src="/ONLINE_CARD_OFFICE/IMAGES/idcardHeader.jpg" border="0" usemap="#HeaderMap" alt="" />
+
+			<map name="HeaderMap" id="HeaderMap">
+				<area shape="rect" coords="133,3,343,78" href="http://www.idcard.psu.edu/" alt="Penn State id+ Card" />
+				<area shape="rect" coords="3,1,120,82" href="http://www.psu.edu/" alt="Penn State Home Page" />
+			</map></center>
+	<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+	  <tr>
+	  	<td align="left" width="200" valign="center"><a href="PSU_USER_MENU_WIN.cfm"><img src="/online_card_office/images/manageaccounts200b.gif" width="200" height="60" border="0"></a></td>
+		<td align="right" width="500" background="/ONLINE_CARD_OFFICE/IMAGES/bckgrnd_repeat_secondary.gif"><a href="LOGOFF_ACT.cfm"><img src="/ONLINE_CARD_OFFICE/IMAGES/logoff127.gif" width="127" height="60" border="0"></a></td>
+	  </tr>
+	</table>
+
+	<body onLoad="Javascript:closeprocwin();FillForm();">
+		
+		
+		
+		
+		<table width="800" align="center">
+			<tr>
+				<td align="center">
+					<font face="Arial" color="maroon">
+						You can email the transaction history report to up to three email addresses by clicking on the buttons.
+					</font>
+				</td>
+			</tr>
+			<tr>
+				<td align="center">
+					<form name="frm_EMAILS" action="EMAIL_REPORT_ACT.cfm" method="post">
+						<input type="hidden" name="email1">
+						<input type="hidden" name="email2">
+						<input type="hidden" name="email3">
+						<input type="hidden" name="goback"><br>
+						<input type="hidden" name="TXT_BEGIN_DATE">
+						<input type="button" name="btn_ADDEDIT" value="Add/Edit Email Addresses" onClick="Javascript:OpenEmailAddresses();">
+						<input type="button" name="btn_SUBMIT" value="Email Report" onClick="Javascript:EmailRpt();">
+					</form>
+				</td>
+			</tr>	
+			<tr>
+				<td align="center">
+					<font face="Arial" color="maroon">
+						~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+					</font>
+				</td>
+			</tr>
+		</table>
+		<table width="700" align="center" border='0'>
+			<tr>
+				<td align="center" colspan="5">
+					<font face="Arial, Helvetica, sans-serif" size="3" color="ca931e">
+						<strong>Transaction History Report for Eugene Ryoo</strong>
+					</font>
+				</td>
+			</tr>
+			<tr>
+				<td align="center" colspan="5">
+					<font face="Arial, Helvetica, sans-serif" size="3" color="ca931e">
+						<strong>03/15/2019 - 03/16/2019</strong>
+					</font>
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan="5">&nbsp;</td>
+			</tr>
+			<tr>
+				<td align="left" colspan="5">
+					<font face="Arial, Helvetica, sans-serif" size="2" color="ca931e">
+						<strong><u>Account Balances</u></strong>
+					</font>
+				</td>
+			</tr>
+			
+							<tr>
+								<td align="left" colspan="5">
+									<font face="Arial, Helvetica, sans-serif" size="2" color="ca931e"><strong>
+										Campus Meal Plan:  385.54
+									</strong></font>
+								</td>
+							</tr>
+						
+							<tr>
+								<td align="left" colspan="5">
+									<font face="Arial, Helvetica, sans-serif" size="2" color="ca931e"><strong>
+										Commuter Meal Plan:  0.00
+									</strong></font>
+								</td>
+							</tr>
+						
+							<tr>
+								<td align="left" colspan="5">
+									<font face="Arial, Helvetica, sans-serif" size="2" color="ca931e"><strong>
+										LionCash+:  5.74
+									</strong></font>
+								</td>
+							</tr>
+							
+			
+			<tr><td colspan="5">&nbsp;</td></tr>
+			
+			<tr>
+				<td align="center">
+					<table border='0' cellspacing=0>
+						<tr>
+							<td style='font-family:Arial, Helvetica, sans-serif; font-size:10pt; color:#ca931e; font-weight:bold; padding:0px 4px 0px 4px;' nowrap>
+								Time and Date
+							</td>
+							<td style='font-family:Arial, Helvetica, sans-serif; font-size:10pt; color:#ca931e; font-weight:bold; padding:0px 4px 0px 4px;' nowrap>
+								Account Name
+							</td>
+							<td style='font-family:Arial, Helvetica, sans-serif; font-size:10pt; color:#ca931e; font-weight:bold; padding:0px 4px 0px 4px;' nowrap>
+								Transaction Type
+							</td>
+							<td style='font-family:Arial, Helvetica, sans-serif; font-size:10pt; color:#ca931e; font-weight:bold; padding:0px 4px 0px 4px;' nowrap>
+								Location
+							</td>
+							<td style='font-family:Arial, Helvetica, sans-serif; font-size:10pt; color:#ca931e; font-weight:bold; padding:0px 4px 0px 4px;' nowrap>
+								Profit Center
+							</td>
+							<td style='font-family:Arial, Helvetica, sans-serif; font-size:10pt; color:#ca931e; font-weight:bold; padding:0px 4px 0px 4px; text-align:right;' nowrap>
+								Transaction Amount
+							</td>
+							<td style='font-family:Arial, Helvetica, sans-serif; font-size:10pt; color:#ca931e; font-weight:bold; padding:0px 4px 0px 4px; text-align:right;' nowrap>
+								Ending Balance
+							</td>
+							
+						</tr>
+				 		
+										<tr >
+											<td style='font-family:Arial, Helvetica, sans-serif; font-size:8pt; padding:2px 8px 2px 8px;' nowrap> 
+												03/15/2019 01:30 PM 
+											</td>
+											<td style='font-family:Arial, Helvetica, sans-serif; font-size:8pt; padding:2px 8px 2px 8px;' nowrap>
+												Campus Meal Plan
+											</td>
+											<td style='font-family:Arial, Helvetica, sans-serif; font-size:8pt; padding:2px 8px 2px 8px;' nowrap>
+												Withdrawal
+											</td>
+											
+												<td style='font-family:Arial, Helvetica, sans-serif; font-size:8pt; padding:2px 8px 2px 8px;' nowrap>
+													HFS, University Park 
+												</td>		
+											
+											<td style='font-family:Arial, Helvetica, sans-serif; font-size:8pt; padding:2px 8px 2px 8px;' nowrap>
+												Waring Square -UP 
+											</td>
+											<td align="right" style=' padding:2px 8px 2px 8px; font-family:Arial; font-size:8pt; color:red;' nowrap>
+												-4.15
+											</td>
+											<td align="right" style=' padding:2px 8px 2px 8px; font-family:Arial; font-size:8pt; color:red;' nowrap>
+												 391.84 
+											</td>
+											
+										</tr>
+									
+										<tr bgcolor="#EBEBEB">
+											<td style='font-family:Arial, Helvetica, sans-serif; font-size:8pt; padding:2px 8px 2px 8px;' nowrap> 
+												03/15/2019 07:22 PM 
+											</td>
+											<td style='font-family:Arial, Helvetica, sans-serif; font-size:8pt; padding:2px 8px 2px 8px;' nowrap>
+												Campus Meal Plan
+											</td>
+											<td style='font-family:Arial, Helvetica, sans-serif; font-size:8pt; padding:2px 8px 2px 8px;' nowrap>
+												Withdrawal
+											</td>
+											
+												<td style='font-family:Arial, Helvetica, sans-serif; font-size:8pt; padding:2px 8px 2px 8px;' nowrap>
+													HFS, University Park 
+												</td>		
+											
+											<td style='font-family:Arial, Helvetica, sans-serif; font-size:8pt; padding:2px 8px 2px 8px;' nowrap>
+												West Wing, The -UP 
+											</td>
+											<td align="right" style=' padding:2px 8px 2px 8px; font-family:Arial; font-size:8pt; color:red;' nowrap>
+												-6.30
+											</td>
+											<td align="right" style=' padding:2px 8px 2px 8px; font-family:Arial; font-size:8pt; color:red;' nowrap>
+												 385.54 
+											</td>
+											
+										</tr>
+									
+						
+					 </table>
+				</td>
+			</tr>
+			<tr><td>&nbsp;</td></tr>
+			<tr>
+				<td align="center"><input type="button" name="btn_BACK" onClick="Javascript:GoBack();" value="BACK"></td>
+			</tr>
+		</table>
+	<center>
+	<br><br>
+	<table width="100%" border="0" cellspacing="0" cellpadding="5" align="center">
+		<tr>
+			<td align="center">
+				<p>
+					<font size="1" face="Arial" color="666666">
+						Penn State Auxiliary and Business Services
+					</font>
+				</p>
+				<p>
+					<font size="1" face="Arial" color="666666">
+						Questions about ID+Online System, contact:
+						<br>
+						 at 814-865-7590 or 
+						<a href="mailto:idcard@psu.edu">
+							idcard@psu.edu
+						</a>.
+						<br>
+						<br>
+						Design and content are provided by the Marketing and Communications Office
+						<br>
+						for Auxiliary and Business Services (
+						<a href="mailto:absmarketing@psu.edu">
+							absmarketing@psu.edu
+						</a>
+						).
+						<br><br>    
+						Site functionality, user interaction and technical support are provided by the<br>Information Systems Office
+			   			for Auxiliary and Business Services 
+						(
+						
+                        	<a href="mailto:ABSsupport@psu.edu?subject=ID_PLUS_ONLINE Application Support Request">
+								ABSsupport@psu.edu
+							</a>
+						
+						).
+					</font>
+				</p>
+			</td>
+		</tr>
+		<tr> 
+			<td align="center">
+				<font size="1" face="Arial" color="666666">
+					<a href="http://guru.psu.edu/policies/ad42.html" target="_blank">
+						Nondiscrimination Statement
+					</a> 
+					| 
+					<a href="http://guru.psu.edu/policies/OHR/hr11.html" target="_blank">
+						Equal Opportunity Policy 
+					</a>
+					| 
+					<a href="http://www.abservices.psu.edu/abservices/WebAccessibility.cfm" target="_blank">
+						Accessibility
+					</a> 
+					| 
+					<a href="http://www.psu.edu/ur/copyright.html" target="_blank">
+						Copyright
+					</a> 
+					| 
+					<a href="http://www.psu.edu/ur/privacy.html" target="_blank">
+						Privacy
+					</a>
+					|
+					<a href="http://www.psu.edu/ur/hotline.html" target="_blank">
+						Hotlines
+					</a>
+				</font>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">
+				<font size="1" face="Arial" color="666666">
+					This page was last updated on 
+					05/19/2015 at 9:07 AM
+				</font>
+			</td>
+		</tr>
+	</table>
+</center>
+	</body>
+</html>
